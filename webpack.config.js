@@ -1,4 +1,5 @@
 const HTMLWebPackPlugin = require("html-webpack-plugin");
+const webpack = require('webpack');
 
 const htmlPlugin = new HTMLWebPackPlugin({
     template: './src/index.html',
@@ -18,7 +19,7 @@ module.exports = {
         ]
     },
     plugins: [
-        htmlPlugin,
+        htmlPlugin
     ],
     devtool: 'cheap-module-eval-source-map'
 }
