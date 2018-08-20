@@ -1,9 +1,9 @@
 const HTMLWebPackPlugin = require("html-webpack-plugin");
-const webpack = require('webpack');
+const webpack = require("webpack");
 
 const htmlPlugin = new HTMLWebPackPlugin({
-    template: './src/index.html',
-    filename: './index.html'
+    template: "./src/index.html",
+    filename: "./index.html"
 });
 
 module.exports = {
@@ -11,15 +11,18 @@ module.exports = {
         rules: [
             {
                 test: /.jsx?$/,
-                exclude: "/node_modules/",
+                exclude: /node_modules/,
                 use: {
                     loader: "babel-loader"
                 }
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ["babel-loader", "eslint-loader"]
             }
         ]
     },
-    plugins: [
-        htmlPlugin
-    ],
-    devtool: 'cheap-module-eval-source-map'
-}
+    plugins: [htmlPlugin],
+    devtool: "cheap-module-eval-source-map"
+};

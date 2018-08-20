@@ -1,12 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import { hot } from "react-hot-loader";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-const Index = () => {
-    return <div>Hello React!</div>;
-}
-ReactDOM.render(<Index />, document.getElementById("index"));
+const Index = () => <div>H ello React!</div>;
+ReactDOM.render(<Index />, document.getElementById('index'));
 
 if (module.hot) {
-    module.hot.accept();
+  module.hot.accept();
 }
