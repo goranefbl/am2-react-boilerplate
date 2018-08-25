@@ -1,14 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App';
 
-const Index = (
-    <div>
-        <h1>Hello React!</h1>
-        <h3>evoa aksd</h3>
-        <p>nest</p>
-    </div>
-);
-ReactDOM.render(Index, document.getElementById('index'));
+ReactDOM.render(<App />, document.getElementById('app'));
 
 if (module.hot) {
     module.hot.accept();
