@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import HeaderContainer from './components/Header/HeaderContainer';
+import FooterContainer from './components/Footer/FooterContainer';
 
 class App extends Component {
     constructor() {
@@ -8,11 +10,13 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <React.Fragment>
+                <HeaderContainer />
                 <h1>Hello React!</h1>
                 <h3>evoa aksd</h3>
                 <p>nest</p>
-            </div>
+                <FooterContainer />
+            </React.Fragment>
         );
     }
 }
